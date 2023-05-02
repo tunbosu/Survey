@@ -8,7 +8,7 @@
     <title>Data Collection</title>
 </head>
 <body>
-    <form method="post" action="process_data.php">
+    <form method="post" action="process.php">
     <label for="faculty">Faculty</label>
     <select id="faculty" name="section7">
         <option value="Option 1">Option 1</option>
@@ -23,25 +23,27 @@
         <option value="Option 2">Option 2</option>
         <option value="Option 3">Option 3</option>
     </select><br>
-    
-    <label for="section1">Section</label>
+    <label for="facility">Name of Facility</label>
+    <input type="text" id="facility" name="facility"><br>
+    <label for="section">Section</label>
     <!-- <input type="text" id="section1" name="section1"> -->
-    <select id="department" name="section7">
+    <select id="type" name="type">
+        <option value="Option 1">Select Type of Facility</option>
         <option value="Option 1">Lecture Theatre/Room</option>
         <option value="Option 2">Computer Lab</option>
         <option value="Option 3">ICT Enhanced Lab</option>
     </select>
     <br>
     
-    <label for="section2">Total Sitting Capacity</label>
-    <input type="text" id="section2" name="section2"><br>
+    <label for="t_capacity">Total Sitting Capacity</label>
+    <input type="text" id="t_capacity" name="t_capacity"><br>
     
-    <label for="section3">Functional Sitting Capacity</label>
-    <input type="text" id="section3" name="section3"><br>
+    <label for="f_capacity">Functional Sitting Capacity</label>
+    <input type="text" id="f_capacity" name="f_capacity"><br>
     
-    <label for="section4">Internet Connectivity</label>
+    <label for="connection">Internet Connectivity</label>
     <!-- <input type="text" id="section4" name="section4"> -->
-    <select id="department" name="section7">
+    <select id="connection" name="connection">
         <option value="Option 1">Working</option>
         <option value="Option 2">Not Working</option>
         <option value="Option 3">Not Available</option>
@@ -75,59 +77,59 @@
     <input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1">
     <label for="checkbox1">Fibre Optics</label>
 </div>
-    <label for="section6">Projector:</label>
+    <label for="projector">Projector:</label>
     <!-- <input type="text" id="section6" name="section6"> -->
-    <select id="department" name="section7">
+    <select id="projector" name="projector">
         <option value="Option 1">Working</option>
         <option value="Option 2">Not Working</option>
         <option value="Option 3">Not Available</option>
     </select>
     If Working
-    <select id="department" name="section7">
+    <select id="projector_year" name="projector_year">
         <option value="Option 1">Select Year of Usage in Range</option>
         <option value="Option 1">Less than 1 Year</option>
         <option value="Option 2">1 Year to 3 Years</option>
         <option value="Option 3">3 Year to 5 Years</option>
         <option value="Option 3">Above 5 Years</option>
     </select>
-    <input type="text" name="Model" id="model" placeholder="Enter the Model">
+    <input type="text" name="projector_Model" id="projector_Model" placeholder="Enter the Model">
     <br>
-    <label for="section6">Smart Board:</label>
+    <label for="smart">Smart Board:</label>
     <!-- <input type="text" id="section6" name="section6"> -->
-    <select id="department" name="section7">
+    <select id="smart" name="smart">
         <option value="Option 1">Working</option>
         <option value="Option 2">Not Working</option>
         <option value="Option 3">Not Available</option>
     </select>
     If Working
-    <select id="department" name="section7">
+    <select id="smart_year" name="smart_year">
         <option value="Option 1">Select Year of Usage in Range</option>
         <option value="Option 1">Less than 1 Year</option>
         <option value="Option 2">1 Year to 3 Years</option>
         <option value="Option 3">3 Year to 5 Years</option>
         <option value="Option 3">Above 5 Years</option>
     </select>
-    <input type="text" name="Model" id="model" placeholder="Enter the Model">
+    <input type="text" name="smart_Model" id="smart_Model" placeholder="Enter the Model">
     <br>
-    <label for="section6">Public Adress System:</label>
+    <label for="pa_sys">Public Adress System:</label>
     <!-- <input type="text" id="section6" name="section6"> -->
-    <select id="department" name="section7">
+    <select id="pa_sys" name="pa_sys">
         <option value="Option 1">Working</option>
         <option value="Option 2">Not Working</option>
         <option value="Option 3">Not Available</option>
     </select>
     If Working
-    <select id="department" name="section7">
+    <select id="pa_sys_year" name="pa_sys_year">
         <option value="Option 1">Select Year of Usage in Range</option>
         <option value="Option 1">Less than 1 Year</option>
         <option value="Option 2">1 Year to 3 Years</option>
         <option value="Option 3">3 Year to 5 Years</option>
         <option value="Option 3">Above 5 Years</option>
     </select>
-    <input type="text" name="Model" id="model" placeholder="Enter the Model">
+    <input type="text" name="pa_sys_Model" id="pa_sys_model" placeholder="Enter the Model">
     <br>
     <label for="ict-eq">Other Ict Equipment</label>
-    <input type="text" name="ict-eq" id="ict-eq">
+    <input type="text" name="ict-eq" id="ict-eq" placeholder="Enter Name">
     <select id="department" name="section7">
         <option value="Option 1">Working</option>
         <option value="Option 2">Not Working</option>
@@ -141,7 +143,7 @@
         <option value="Option 3">Above 5 Years</option>
     </select>
     <label for="purpose">purpose</label>
-    <input type="text" name="Purpose" id="purpose">
+    <input type="text" name="Purpose" id="purpose" placeholder="Enter Purpose">
     <label for="purpose">Performance</label>
     <!-- <input type="text" name="Purpose" id="purpose"> -->
     <select id="department" name="section7">
@@ -195,12 +197,13 @@
         <label><input type="checkbox" name="option8" value="8">Option 8</label>
       </div>
     -->
-        
+   
     <!--<label for="section10">User General Comment:</label>
     <input type="text" id="section10" name="section10"><br> -->
     <label for="text-box">User General Comment:</label>
       <textarea id="text-box" rows="10" cols="50"></textarea>
-    <input type="submit" value="Submit">
+      <!--<form method="post" action="process.php"> -->
+      <input type="submit" value="Submit">
 </form>
 
 </body>
